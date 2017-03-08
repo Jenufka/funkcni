@@ -25,7 +25,10 @@
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			var player = document.getElementById('player');
-
+			var food = document.getElementById('food');
+			var body = document.getElementById('body');
+			var	bodyprnt = 0;
+			//document.getElementById(´myid´).innerHTML =body
 			window.addEventListener('keydown', function(event) {
 				console.log(event);
  					if (event.key == "ArrowUp") {
@@ -48,6 +51,9 @@
 						console.log ("zasah");
 						food.style.top = Math.random() * 410 + "px";
 						food.style.left = Math.random() * 630 + "px";
+						bodyprnt += 1;
+						score.textContent = "Body: " + bodyprnt;
+						console.log (body);
 					}
 
 			}, true);
